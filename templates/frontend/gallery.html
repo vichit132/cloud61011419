@@ -1,17 +1,22 @@
 {% extends 'frontend/base.html' %}
-{% block title %} Gallery {% endblock %}
+{% block title %} Calendar {% endblock %}
 {% block content %}
-<div class="jumbotron">
-    <h1 class="display-3">Gallery Page</h1>
-    <p class="lead"></p>
-    <img src="static/images/pg2.png"   vspace="50">
-    <img src="static/images/Pg (2).png"   vspace="50">
-    <img src="static/images/Pg (3).png"   vspace="50">
-    <img src="static/images/Pg (4).png"   vspace="50">
-    <hr class="my-2">
-    <p>More info</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="https://photos.google.com/u/0/share/AF1QipO5nPhwWLIRk47ike8nGGoSP14n4edV7K1fefRo4wBW3Ac3h7S0KWHGcpqpGr0fGA?hl=ja&key=RXFOZUE2SkViM3RjNEVRdmVYZWNxYjNETVNmbUln" role="button">source</a>
-    </p>
-</div>
+<style>
+  loading {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  calendar {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+</style>
+<div id="loading">loading...</div>
+
+<div id="calendar"></div>
+
 {% endblock %}
